@@ -1,0 +1,33 @@
+@startuml
+
+Interface Function {
+    double execute()
+    void print()
+    string toString()
+    list<string> getVariables()
+}
+
+Class SimpleFunctions implements Function {
+    List<Operation> operations
+        setOperations()
+        addOperations()
+}
+
+Interface Operation implements Function {}
+Class Mult implements Operation {}
+Class Add implements Operation {}
+Class Sub implements Operation {}
+Class Pow implements Operation {}
+Class SqRoot implements Operation {}
+
+
+Interface Value implements Function {
+}
+
+Class Const implements Value {}
+Class Variable implements Value {}
+
+
+
+
+@enduml
